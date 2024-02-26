@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+  <mat-toolbar color="primary"  class="custom-background">
+    <mat-toolbar-row>
+      <span>
+        <ion-back-button slot="start" defaultHref="/dncic"></ion-back-button>
+      </span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <span class="text-center">Annalyse des stocks</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="section_search">
+    <ion-list>
+      <ion-item>
+        <ion-select
+          interface="popover"
+          toggleIcon="add"
+          expandedIcon="remove"
+          aria-label="fruit"
+          placeholder="Veuillez sélectionner votre region"
+        >
+          <ion-select-option value="apples">Region 1</ion-select-option>
+          <ion-select-option value="oranges">Region 2</ion-select-option>
+          <ion-select-option value="bananas">Region 3</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-icon name="filter-outline"></ion-icon>
+  </div>
+
+<div>
+  <ion-card>
+    <ion-card-title class="ion-padding-start">Bar</ion-card-title>
+    <ion-card-content class="ion-margin-top" [ngClass]="{'cardContent' : below}">
+      <app-line-chart-dncic [view]="view" [legendPosition]="legendPosition"></app-line-chart-dncic>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+<section class="example-container mat-elevation-z8" tabindex="0">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name" sticky>
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <!-- Star Column -->
+    <ng-container matColumnDef="star" stickyEnd>
+      <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon>more_vert</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</section>
+
+</ion-content>

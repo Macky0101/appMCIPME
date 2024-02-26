@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <div class="title">
+    <div class="mcipme">
+      MCIPME
+    </div>
+    <div>
+      <ion-icon class="icon" size="large" name="notifications-outline"></ion-icon>
+    </div>
+  </div>
+  <ion-card class="title_card" style="height: 140px; border-radius: 0;">
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+      <ion-img src="assets/images/logo.png"style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;"></ion-img>
+      <ion-label style="flex: 1; text-align: center; color: rgb(255, 255, 255);">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 400;"> Ministère du Commerce de l'Industrie et des PME de la Guinée</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <h1>Mes comptes</h1>
+  <ion-card class="title_card" style="height: 140px; border-radius: 0;" (click)="dni()">
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+      <ion-label style="flex: 1; text-align: center; color: rgb(255, 255, 255);">
+        <h2 style="margin: 0; font-size: 16px; font-weight: 500;">Page Direction Nationale
+          de l'Industrie (DNI)</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="title_card" style="height: 140px; border-radius: 0;" (click)="dncic()">
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+      <ion-label style="flex: 1; text-align: center; color: rgb(255, 255, 255);">
+        <h2 style="margin: 0; font-size: 16px; font-weight: 500;">Direction du Commerce Intérieur
+          et Concurrence (DNCIC).</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

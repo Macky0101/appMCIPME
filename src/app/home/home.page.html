@@ -1,20 +1,99 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="title">
+    <div class="mcipme">
+      MCIPME
+    </div>
+    <div>
+      <ion-icon class="icon" size="large" name="notifications-outline"></ion-icon>
+    </div>
   </div>
+  <ion-card class="title_card" style="height: 140px; border-radius: 0;">
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+      <ion-img src="assets/images/logo.png"style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;"></ion-img>
+      <ion-label style="flex: 1; text-align: center; color: rgb(255, 255, 255);">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 400;"> Ministère du Commerce de l'Industrie et des PME de la Guinée</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <div class="MesButton">
+    <div class="btn" (click)="statistique()">
+      <ion-icon name="bar-chart-outline"></ion-icon>
+       <p>Statistique</p>
+    </div>
+    <div class="btn" (click)="PageIndustrie()">
+      <ion-icon name="construct-outline"></ion-icon>
+      <p>Industrie</p>
+    </div>
+    <div class="btn" (click)="PageLocalisation()">
+      <ion-icon name="location-outline"></ion-icon>
+      <p>Localisation</p>
+    </div>
+  </div>
+  <!-- <swiper-container>
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+  </swiper-container> -->
+
+
+  <!-- <swiper-container [slidesPerView]="2" [loop]="true">
+    <swiper-slide>
+      <ion-card class="custom-carde ">
+        <ion-header class="head">
+          d'unités industrielles
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>7596</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card  class="custom-carde2 ">
+        <ion-header class="head">
+          d'emplois créés
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>7596</p> <br>
+          <p>Homme: 5596</p>
+          <p>Femme: 2000</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card class="custom-carde3 ">
+        <ion-header class="head">
+          Production totale
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>7464</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card class="custom-carde4 ">
+        <ion-header class="head">
+          Contribution au PIB
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>10%</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container> -->
+  <ion-card>
+  <app-card-chart [view]="view" [legendPosition]="legendPosition"></app-card-chart>
+  </ion-card>
+  <div class="section1">
+  <div>
+    <h2>Production</h2>
+  </div>
+  <div >
+    <ion-button class="section1_btn">M</ion-button>
+    <ion-button class="section1_btn">A</ion-button>
+  </div>
+</div>
+<div>
+  <app-horizontal-bar-chart [view]="view" [legendPosition]="legendPosition"></app-horizontal-bar-chart>
+
+</div>
 </ion-content>

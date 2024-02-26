@@ -1,0 +1,87 @@
+<ion-content [fullscreen]="true">
+  <div class="title">
+    <div class="mcipme">
+      MCIPME
+    </div>
+    <div>
+      <ion-icon class="icon" size="large" name="notifications-outline"></ion-icon>
+    </div>
+  </div>
+  <ion-card class="title_card" style="height: 140px; border-radius: 0;">
+    <ion-card-content style="display: flex; justify-content: space-between; align-items: center; padding: 16px;">
+      <ion-img src="assets/images/logo.png"style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;"></ion-img>
+      <ion-label style="flex: 1; text-align: center; color: rgb(255, 255, 255);">
+        <h2 style="margin: 0; font-size: 13px; font-weight: 400;"> Ministère du Commerce de l'Industrie et des PME de la Guinée</h2>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <div class="MesButton">
+    <div class="btn" (click)="PageStocks()">
+      <ion-icon name="cube"></ion-icon>
+      <p>Stocks</p>
+    </div>
+    <div class="btn" (click)="PageImportation()">
+      <ion-icon name="cloud-upload"></ion-icon>
+      <p>Import</p>
+    </div>
+    <div class="btn" (click)="PageDistributeurs()">
+      <ion-icon name="people"></ion-icon>
+      <p>Distributeurs</p>
+    </div>
+  </div>
+
+  <!-- <swiper-container>
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+  </swiper-container> -->
+
+
+  <swiper-container [slidesPerView]="2" [loop]="true">
+    <swiper-slide>
+      <ion-card class="custom-carde ">
+        <ion-header class="head">
+          Entreprises importatrices
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>7596</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card  class="custom-carde2 ">
+        <ion-header class="head">
+         Entreprises Distributeurs
+        </ion-header>
+        <ion-card-content class="contt">
+          <p>7596</p>
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+<!-- <app-card-chart [view]="view" [legendPosition]="legendPosition"></app-card-chart> -->
+
+<div class="section1">
+    <h2> l'évolution des stocks disponibles, des importations et des prévisions d'importations.</h2>
+</div>
+<div class="section_search">
+  <ion-list>
+    <ion-item>
+      <ion-select
+        interface="popover"
+        toggleIcon="add"
+        expandedIcon="remove"
+        aria-label="fruit"
+        placeholder="Veuillez sélectionner votre region"
+      >
+        <ion-select-option value="apples">Region 1</ion-select-option>
+        <ion-select-option value="oranges">Region 2</ion-select-option>
+        <ion-select-option value="bananas">Region 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</div>
+<div>
+      <app-line-chart [view]="view" [legendPosition]="legendPosition"></app-line-chart>
+</div>
+</ion-content>

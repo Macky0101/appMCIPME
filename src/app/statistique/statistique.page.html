@@ -1,0 +1,51 @@
+
+<ion-content [fullscreen]="true">
+  <mat-toolbar color="primary"  class="custom-background">
+    <mat-toolbar-row>
+      <span>
+        <ion-back-button slot="start" defaultHref="/unites-industrie"></ion-back-button>
+      </span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <span class="text-center">Filtrer les donnéets par indicateur</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <span class="text-center">Indicateur: </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <ion-list>
+    <ion-item>
+      <ion-select
+        interface="popover"
+        toggleIcon="add"
+        expandedIcon="remove"
+        aria-label="fruit"
+        placeholder="Veuillez sélectionner votre region"
+      >
+        <ion-select-option value="apples">Region 1</ion-select-option>
+        <ion-select-option value="oranges">Region 2</ion-select-option>
+        <ion-select-option value="bananas">Region 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-title class="ion-padding-start">Pie Chart</ion-card-title>
+    <ion-card-content class="ion-margin-top" [ngClass]="{'cardContent' : below}">
+      <app-pie-chart [view]="view" [legendPosition]="legendPosition"></app-pie-chart>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-title class="ion-padding-start">Vertical Bar Chart</ion-card-title>
+    <ion-card-content class="ion-margin-top" [ngClass]="{'cardContent' : below}">
+      <app-vertical-bar-chart [view]="view" [legendPosition]="legendPosition"></app-vertical-bar-chart>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card>
+    <ion-card-title class="ion-padding-start">Bar</ion-card-title>
+    <ion-card-content class="ion-margin-top" [ngClass]="{'cardContent' : below}">
+      <ngx-charts-number-card [view]="view"></ngx-charts-number-card>
+    </ion-card-content>
+  </ion-card> -->
+
+
+</ion-content>
