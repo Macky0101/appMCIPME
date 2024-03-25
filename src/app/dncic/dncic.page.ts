@@ -1,8 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonicSlides, Platform } from '@ionic/angular';
+import { IonicSlides, LoadingController, Platform, ToastController } from '@ionic/angular';
 import { LegendPosition } from '@swimlane/ngx-charts';
 import { register } from 'swiper/element/bundle';
+import { AuthService } from '../services/auth.service';
 register();
 
 @Component({
@@ -20,6 +21,9 @@ export class DNCICPage implements OnInit {
   constructor(
     private platform: Platform,
     private router : Router,
+    private authService: AuthService,
+    private loadingCtrl: LoadingController,
+    private toastCtrl: ToastController,
   ) {}
 
   ngOnInit () {
@@ -60,4 +64,15 @@ export class DNCICPage implements OnInit {
     this.router.navigate(['/page-distributeurs']);
   }
 
+
+
+  logout(): void {
+    this.authService.logout().subscribe({
+      next: () => {
+        this.router.navigateByUrl('/page-login');
+      },
+      error: (error) => {
+      }
+    });
+  }
 }

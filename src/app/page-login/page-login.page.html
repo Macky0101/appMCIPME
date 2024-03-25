@@ -1,0 +1,18 @@
+<ion-content class="ion-padding">
+  <div class="header">
+    <img src="assets/images/logo_mcipme.png" alt=" Logo" class="logo">
+    <h1>Connexion</h1>
+  </div>
+  <form [formGroup]="form" class="login-form">
+    <div>
+      <ion-label>Email</ion-label>
+      <ion-input formControlName="email"  class="input" type="email" placeholder="Votre email"></ion-input>
+    </div>
+    <div>
+      <ion-label>Mot de passe</ion-label>
+      <ion-input formControlName="password" class="input" type="password" placeholder="Votre mot de passe"></ion-input>
+    </div>
+    <ion-button class="full" [disabled]="form.invalid" (click)="onlogin()" expand="block">Login</ion-button>
+  </form>
+  <ion-button expand="block" fill="clear" [routerLink]="['/resetpassword']" routerLinkActive="router-link-active" >mot passe oublié</ion-button>
+</ion-content>

@@ -80,8 +80,15 @@
       </ion-card>
     </swiper-slide>
   </swiper-container> -->
+  <ion-item>
+    <ion-label>Année:</ion-label>
+    <ion-select [(ngModel)]="selectedYear" (ionChange)="updateStatistics()">
+      <ion-select-option *ngFor="let year of availableYears" [value]="year">{{ year }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
   <ion-card>
-  <app-card-chart [view]="view" [legendPosition]="legendPosition"></app-card-chart>
+  <app-card-chart [view]="view" [legendPosition]="legendPosition" [PmeCount]="PmeCount" [DistributorsCount]="DistributorsCount" [EmployersCount]="EmployersCount"></app-card-chart>
   </ion-card>
   <div class="section1">
   <div>

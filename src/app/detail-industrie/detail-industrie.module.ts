@@ -9,6 +9,7 @@ import { DetailIndustriePageRoutingModule } from './detail-industrie-routing.mod
 import { DetailIndustriePage } from './detail-industrie.page';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     IonicModule,
     DetailIndustriePageRoutingModule,
-    MatToolbarModule, MatIconModule
+    MatToolbarModule, MatIconModule,
+    HttpClientModule
   ],
   declarations: [DetailIndustriePage]
 })

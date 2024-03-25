@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HorizontalBarChartComponent } from '../compoments/horizontal-bar-chart/horizontal-bar-chart.component';
 import { CardChartComponent } from '../compoments/card-chart/card-chart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CardChartComponent } from '../compoments/card-chart/card-chart.componen
     HomePageRoutingModule,
     ReactiveFormsModule,
     HorizontalBarChartComponent,
-    CardChartComponent
+    CardChartComponent,
+    HttpClientModule
 
   ],
   declarations: [HomePage],

@@ -21,76 +21,27 @@
   <mat-tab-group animationDuration="800ms">
     <!-- tous les unite -->
     <mat-tab label="Tout">
-      <ion-card class="title_card" (click)="PageDetailUsine()">
-        <ion-card-content class="content_card">
-          <ion-img src="assets/images/logo.png" class="img"></ion-img>
-          <ion-label class="label">
-            <ion-note class="note_title">Cimenterie de Guinée</ion-note> <br>
-            <ion-note><span>Localisation:</span> Conakry, Guinée</ion-note> <br>
-            <ion-note><span>Secteur d'activité:</span> Production de ciment</ion-note> <br>
-            <ion-note><span>Taille:</span> 500 employés</ion-note> <br>
-            <ion-note><span>N°RCCM:</span> GN/CON/RCCM/12-B-1097</ion-note> <br>
-          </ion-label>
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="title_card" (click)="PageDetailUsine()">
-        <ion-card-content class="content_card">
-          <ion-img src="assets/images/logo.png" class="img"></ion-img>
-          <ion-label class="label">
-            <ion-note class="note_title">Cimenterie de Guinée</ion-note> <br>
-            <ion-note><span>Localisation:</span> Conakry, Guinée</ion-note> <br>
-            <ion-note><span>Secteur d'activité:</span> Production de ciment</ion-note> <br>
-            <ion-note><span>Taille:</span> 500 employés</ion-note> <br>
-            <ion-note><span>N°RCCM:</span> GN/CON/RCCM/12-B-1097</ion-note> <br>
-          </ion-label>
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="title_card" (click)="PageDetailUsine()">
-        <ion-card-content class="content_card">
-          <ion-img src="assets/images/logo.png" class="img"></ion-img>
-          <ion-label class="label">
-            <ion-note class="note_title">Cimenterie de Guinée</ion-note> <br>
-            <ion-note><span>Localisation:</span> Conakry, Guinée</ion-note> <br>
-            <ion-note><span>Secteur d'activité:</span> Production de ciment</ion-note> <br>
-            <ion-note><span>Taille:</span> 500 employés</ion-note> <br>
-            <ion-note><span>N°RCCM:</span> GN/CON/RCCM/12-B-1097</ion-note> <br>
-          </ion-label>
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="title_card" (click)="PageDetailUsine()">
-        <ion-card-content class="content_card">
-          <ion-img src="assets/images/logo.png" class="img"></ion-img>
-          <ion-label class="label">
-            <ion-note class="note_title">Cimenterie de Guinée</ion-note> <br>
-            <ion-note><span>Localisation:</span> Conakry, Guinée</ion-note> <br>
-            <ion-note><span>Secteur d'activité:</span> Production de ciment</ion-note> <br>
-            <ion-note><span>Taille:</span> 500 employés</ion-note> <br>
-            <ion-note><span>N°RCCM:</span> GN/CON/RCCM/12-B-1097</ion-note> <br>
-          </ion-label>
-        </ion-card-content>
-      </ion-card>
-      <ion-card class="title_card" (click)="PageDetailUsine()">
-        <ion-card-content class="content_card">
-          <ion-img src="assets/images/logo.png" class="img"></ion-img>
-          <ion-label class="label">
-            <ion-note class="note_title">Cimenterie de Guinée</ion-note> <br>
-            <ion-note><span>Localisation:</span> Conakry, Guinée</ion-note> <br>
-            <ion-note><span>Secteur d'activité:</span> Production de ciment</ion-note> <br>
-            <ion-note><span>Taille:</span> 500 employés</ion-note> <br>
-            <ion-note><span>N°RCCM:</span> GN/CON/RCCM/12-B-1097</ion-note> <br>
-          </ion-label>
-        </ion-card-content>
-      </ion-card>
 
-
-
+      <ion-card *ngFor="let item of ListeInsdust" class="title_card" (click)="PageDetailUsine(item.CodeMpme)">
+        <ion-card-content class="content_card">
+          <ion-img src="assets/images/logo.png" class="img"></ion-img>
+          <ion-label class="label">
+            <ion-note class="note_title">{{item.CodeMpme}}</ion-note> <br>
+            <ion-note class="note_title">{{item.NomMpme}}</ion-note> <br>
+            <ion-note><span>Localisation:</span>{{item.Localisation}}</ion-note> <br>
+            <ion-note><span>Secteur d'activité:</span> {{item.PrincipalSecteurActivite}}</ion-note> <br>
+            <ion-note><span>Nbr Enploye:</span>{{item.NbreEmploye}}</ion-note> <br>
+            <ion-note><span>N°RCCM:</span>{{item.NumeroRccm}}</ion-note> <br>
+          </ion-label>
+        </ion-card-content>
+      </ion-card>
 
     </mat-tab>
     <!-- tous les unite -->
 
     <!-- tous les unite privée -->
     <mat-tab label="Privée">
-      <ion-card class="title_card" (click)="PageDetailUsine()">
+      <ion-card class="title_card" >
         <ion-card-content class="content_card">
           <ion-img src="assets/images/logo.png" class="img"></ion-img>
           <ion-label class="label">
@@ -102,7 +53,7 @@
           </ion-label>
         </ion-card-content>
       </ion-card>
-      <ion-card class="title_card" (click)="PageDetailUsine()">
+      <ion-card class="title_card" >
         <ion-card-content class="content_card">
           <ion-img src="assets/images/logo.png" class="img"></ion-img>
           <ion-label class="label">
@@ -119,7 +70,7 @@
 
     <!-- tous les unite public -->
     <mat-tab label="Public">
-      <ion-card class="title_card" (click)="PageDetailUsine()">
+      <ion-card class="title_card" >
         <ion-card-content class="content_card">
           <ion-img src="assets/images/logo.png" class="img"></ion-img>
           <ion-label class="label">

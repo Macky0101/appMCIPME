@@ -24,3 +24,65 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+ion-label {
+  font-weight: bold;
+  color:#444 ;
+}
+
+ion-input.input, ion-textarea.input{
+  --background:#eeeeee;
+  --padding-start:16px;
+  --padding-end:16px;
+  border-radius:10px;
+  height: 45px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+ion-textarea.input{
+  height: auto;
+}
+ion-button.full{
+  --box-shadow: none;
+  --border-radius: 10px;
+  text-transform: initial;
+  font-size: 18px;
+  height: 48px;
+}
+
+.example-content {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+.my-ionic-app {
+.example-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+}
+ion-buttons{
+  margin-right: 30px;
+}
+
+
+
+
+ion-title.title-large {
+  color: #000000;
+  font-size: 30px;
+}
+
+ion-title {
+  --color: #000;
+}
+
+ion-toolbar {
+  --background: #ecebeb;
+}
